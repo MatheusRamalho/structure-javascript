@@ -1,0 +1,146 @@
+body {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    .wrapper__ {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+
+        .sidebar__ {
+            position: relative;
+
+            width: 21.875rem;
+            height: 100vh;
+            background-color: $blackRegular;
+            overflow: hidden;
+            transition: all ease .5s;
+        }
+
+        .inner__ {
+            width: calc(100% - 21.875rem);
+            height: 100%;
+
+            .main__ {
+                width: 100%;
+                height: calc(100vh - 5rem);
+                overflow: auto;
+                padding: 2rem;
+                background-color: $blackDark;
+            }
+
+            .footer__ {
+                width: 100%;
+                height: 5rem;
+                padding: 0 5rem;
+                border-top: 0.063rem solid $blackRegular;
+                background-color: $blackDark;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                span {
+                    font-size: 0.9rem;
+                    font-style: italic;
+                    text-align: center;
+                }
+
+                a {
+                    font-size: 0.9rem;
+
+                    &:hover {
+                        color: $colorRegular;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sidebar__menu {
+    list-style-type: none;
+
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    margin: 0;
+    padding: 2rem 1rem;
+
+    scrollbar-width: auto;
+    scrollbar-color: $blackDark transparent;
+
+    &::-webkit-scrollbar { // Chrome, Edge e Safari...
+        width: 0.938rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $blackDark;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    .sidebar__title {
+        margin: 1.4rem 0 0 0;
+
+        color: $grayRegular;
+    }
+
+    .sidebar__item {
+        width: 100%;
+        height: 3rem;
+        padding-left: 1.5rem;;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:hover {
+            background-color: $blackDark;
+            color: $white;
+        }
+    }
+}
+
+.article__ {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    border-radius: 0.44rem;
+    background-color: $blackRegular;
+
+    .article__header {
+        padding: 1rem;
+        border-bottom: 0.063rem solid $blackDark;
+    }
+
+    .article__body {
+        padding: 1rem;
+
+        code {
+            height: auto;
+            padding: 1rem;
+            border-radius: 0.44rem;
+            background-color: $blackDark;
+
+            display: block;
+
+            color: $white;
+            line-height: 2.188rem;
+            white-space: pre-line; // Como os espaços em branco são manipulados
+
+            .comments__ {
+                font-style: italic;
+                font-size: 0.8rem;
+                color: $grayDark;
+            }
+        }
+    }
+}

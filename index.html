@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="aplication-name" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="generator" content="VS Code">
+        <meta name="author" content="Matheus Ramalho">
+        <meta name="copyright" content="Matheus Ramalho">
+
+        <title> JavaScript doc </title>
+
+        <!-- STYLES... -->
+        <link type="image/png" rel="shortcut icon" href="">
+        <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap">
+    </head>
+
+    <body>
+        <div class="wrapper__">
+            <aside class="sidebar__">
+                <!-- <a class="sidebar__action" id="sidebar__action" href="#">
+                    <span class="sidebar__icon"></span>
+                </a> -->
+
+                <ul class="sidebar__menu">
+                    <a class="sidebar__item" href="#home"> Home </a>
+
+                    <h6 class="sidebar__title"> Base </h6>
+                    <a class="sidebar__item" href="#variavel"> Variáveis </a>
+                    <a class="sidebar__item" href="#tipagem"> Tipagem </a>
+                    <a class="sidebar__item" href="#selecionar"> Seletores </a>
+                    <a class="sidebar__item" href="#alterar"> Alteração HTML </a>
+
+                    <h6 class="sidebar__title"> Eventos </h6>
+                    <a class="sidebar__item" href="#evento_recurso"> Recurso </a>
+                    <a class="sidebar__item" href="#evento_rede"> Rede </a>
+                    <a class="sidebar__item" href="#evento_foco"> Foco </a>
+                    <a class="sidebar__item" href="#evento_websocket"> Websocket </a>
+                    <a class="sidebar__item" href="#evento_historico_sessao"> Histórico </a>
+                    <a class="sidebar__item" href="#evento_animacao"> Animação CSS </a>
+                    <a class="sidebar__item" href="#evento_transicao"> Transição CSS </a>
+                    <a class="sidebar__item" href="#evento_formulario"> Formulário </a>
+                    <a class="sidebar__item" href="#evento_impressao"> Impressão </a>
+                    <a class="sidebar__item" href="#evento_composicao"> Composição </a>
+                    <a class="sidebar__item" href="#evento_tela"> Tela </a>
+                    <a class="sidebar__item" href="#evento_area_transferencia"> Área de Transferência </a>
+                    <a class="sidebar__item" href="#evento_teclado"> Teclado </a>
+                    <a class="sidebar__item" href="#evento_mouse"> Mouse </a>
+                    <a class="sidebar__item" href="#evento_arrastar_soltar"> Arrastar/Soltar </a>
+                    <a class="sidebar__item" href="#evento_midia"> Mídia </a>
+                    <a class="sidebar__item" href="#evento_progresso"> Progresso </a>
+
+                    <h6 class="sidebar__title"> Styles </h6>
+                    <a class="sidebar__item" href="#style_classe"> Class </a>
+                    <a class="sidebar__item" href="#style_style"> Style </a>
+
+                    <h6 class="sidebar__title"> Listagens </h6>
+                    <a class="sidebar__item" href="#array"> Array </a>
+                    <a class="sidebar__item" href="#objeto"> Objeto </a>
+
+                    <h6 class="sidebar__title"> Loops </h6>
+                    <a class="sidebar__item" href="#loop_for"> For </a>
+                    <a class="sidebar__item" href="#loop_while"> While </a>
+
+                    <h6 class="sidebar__title"> Manipulações </h6>
+                    <a class="sidebar__item" href="#methodo_string"> String </a>
+                    <a class="sidebar__item" href="#methodo_numero"> Número </a>
+                    <a class="sidebar__item" href="#methodo_array"> Array </a>
+
+                    <h6 class="sidebar__title"> Outhers </h6>
+                    <a class="sidebar__item" href="#date"> Data </a>
+                    <a class="sidebar__item" href="#matematica"> Matemática </a>
+                    <a class="sidebar__item" href="#intervalo"> Intervalo </a>
+                    <a class="sidebar__item" href="#template_string"> Template string </a>
+
+                    <h6 class="sidebar__title"> Desconstruindo </h6>
+                    <a class="sidebar__item" href="#desconstruindo_objeto"> Objeto </a>
+                    <a class="sidebar__item" href="#desconstruindo_array"> Array </a>
+                </ul>
+            </aside>
+
+            <div class="inner__">
+                <main class="main__">
+                    <article class="article__ head__article" id="home"> <!--Entrada-->
+                        <div class="article__header">
+                            <h1 class="titleFirst" id="titleFirst"> JAVASCRIPT </h1>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="variavel"> <!--Variáveis-->
+                        <div class="article__header">
+                            <h5> Variáveis </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> var </span> variavel__var = <span class="value__">"var"</span>; <span class="comments__"> // Hoisting - variável enviada para o escopo geral, fica disponível em qualquer lugar. - variável pode ser redefinida. </span>
+                                <span class="chave__"> let </span> variavel__let = <span class="value__">"let"</span>; <span class="comments__"> // variável fica disponível apenas no escopo específico. - variável não pode ser redefinida. </span>
+                                <span class="chave__"> cosnt </span> variavel__const = <span class="value__">"const"</span>; <span class="comments__"> // variável de valor constante. - Valor não pode ser modificado.  - Exceção para arrays e objetos em questão do valor. Não pode alterar a estrutura. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="tipagem"> <!--Tipagem-->
+                        <div class="article__header">
+                            <h5> Tipagem </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> var </span> variavel__string = <span class="value__"> "string" </span>; <span class="comments__"> // STRING - Textos. </span>
+                                <span class="chave__"> var </span> variavel__number = <span class="value__"> 26 </span>; <span class="comments__"> // NUMBER - Números. </span>
+                                <span class="chave__"> var </span> variavel__booleano = <span class="value__"> true </span>; <span class="comments__"> // BOOLEANO - true ou false. </span>
+                                <span class="chave__"> var </span> variavel__undefined; <span class="comments__"> // UNDEFINED - Quando não possui valor definido. </span>
+                                <span class="chave__"> var </span> variavel__null = <span class="value__"> null </span>; <span class="comments__"> // NULL - </span>
+                                <span class="chave__"> var </span> variavel__array = [ <span class="value__">'elemento'</span>, <span class="value__">'elemento2'</span> ]; <span class="comments__"> // ARRAY - Conjunto de vários elementos (listas). </span>
+                                <span class="chave__"> var </span> variavel__objeto = { nome: <span class="value__">'elemento'</span>, tipo: <span class="value__">'elemento2'</span> }; <span class="comments__"> // OBJETO - Coleção de dados e/ou funcionalidades relacionadas. </span>
+                                <span class="chave__"> typeof </span> variavel__string; <span class="comments__"> // Forma de verificar o tipo da variável </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="selecionar"> <!--selecionar-->
+                        <div class="article__header">
+                            <h5> Seletores </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>); <span class="comments__"> // Seleciona elemento pelo ID. </span>
+                                document.<span class="chave__">getElementsByClassName</span>(<span class="value__"> 'class'</span>); <span class="comments__"> // Seleciona o elemento pela CLASS. </span>
+                                document.<span class="chave__">querySelector</span>(<span class="value__"> '.element'</span>); <span class="comments__"> // Seleciona o primeiro elemento especificado da mesma forma que seleciona no css (elemento, class, id). </span>
+                                document.<span class="chave__">querySelectorAll</span>(<span class="value__"> '.elements'</span>); <span class="comments__"> // Seleciona todos os elementos especificados e retorna um array. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="alterar"> <!--Alterar HTML-->
+                        <div class="article__header">
+                            <h5 class="titleAlter" id="titleAlter"> Alterando elementos </h5>
+                            <input class="input__" id="inputAlter" type="text" name="" value="Conteúdo value" placeholder="Campo....">
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'titleAlter' </span>).innerHTML = <span class="value__"> "Alterar HTM" </span>; <span class="comments__"> // Altera o conteúdo interno de tag html </span>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'inputAlter' </span>).value = <span class="value__"> "Alterar value" </span>; <span class="comments__"> // Alterar o conteudo de um elemento </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_recurso"> <!--Evento recursos-->
+                        <div class="article__header">
+                            <h5> Evento Recursos </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> cached </span> <span class="comments__"> // Os recursos listados no manifesto foram baixados, e a aplicação ja está armazenada em cache. </span>
+                                <span class="chave__"> error </span> <span class="comments__"> // Falha no carregamento do recurso. </span>
+                                <span class="chave__"> abort </span> <span class="comments__"> // O carregamento do recurso foi abortado </span>
+                                <span class="chave__"> load </span> <span class="comments__"> // O recurso e suas dependências foram carregadas </span>
+                                <span class="chave__"> beforeunload </span> <span class="comments__"> // Os recursos da página que estavam sendo baixados estão prestes a ser cancelados. </span>
+                                <span class="chave__"> unload </span> <span class="comments__"> // O documento ou suas dependências estão sendo canceladas. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_rede"> <!--Evento rede-->
+                        <div class="article__header">
+                            <h5> Evento Rede </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> online </span> <span class="comments__"> // O navegador está conectado à rede. </span>
+                                <span class="chave__"> offline </span> <span class="comments__"> // O navegador perdeu acesso à redeFoco </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_foco"> <!--Evento foco-->
+                        <div class="article__header">
+                            <h5> Evento Foco </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> focus </span> <span class="comments__"> // O elemento recebeu o foco (False para Bubbles) </span>
+                                <span class="chave__"> blur </span> <span class="comments__"> // O elemento perdeu o foco (False para Bubbles) </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_websocket"> <!--Evento websocket-->
+                        <div class="article__header">
+                            <h5> Evento WebSocket </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> open </span> <span class="comments__"> // Conexão WebSocket estabelecida </span>
+                                <span class="chave__"> message </span> <span class="comments__"> // Mensagem recebida através do WebSocket </span>
+                                <span class="chave__"> error </span> <span class="comments__"> // A conexão WebSocket foi encerrada, com erro na transmissão / recepção de dados </span>
+                                <span class="chave__"> close </span> <span class="comments__"> // Conexão encerrada </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_historico_sessao"> <!--Evento historico sessão-->
+                        <div class="article__header">
+                            <h5> Evento Histórico de sessão </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> pagehide </span> <span class="comments__"> // Quando o documento está para ser fechado e guardado no cache </span>
+                                <span class="chave__"> pageshow </span> <span class="comments__"> // Quando o documento é carregado pela primeira vez </span>
+                                <span class="chave__"> popstate </span> <span class="comments__"> // Quando o navegador carrega uma nova página ou restaura um estado salvo com History. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_animacao"> <!--Evento animações-->
+                        <div class="article__header">
+                            <h5> Evento Animações CSS </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> animationstart </span> <span class="comments__"> // A animação começou </span>
+                                <span class="chave__"> animationend </span> <span class="comments__"> // A animação acabou </span>
+                                <span class="chave__"> animationiteration </span> <span class="comments__"> // A animação se repete </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_transicao"> <!--Evento transições-->
+                        <div class="article__header">
+                            <h5> Evento Transição CSS </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> transitionstart </span> <span class="comments__"> // A transição CSS começou (depois de algum delay) </span>
+                                <span class="chave__"> transitioncancel </span> <span class="comments__"> // A transição CSS foi cancelada </span>
+                                <span class="chave__"> transitionend </span> <span class="comments__"> // A transição CSS acabou </span>
+                                <span class="chave__"> transitionrun </span> <span class="comments__"> // A transição CSS começou (antes de qualquer delay). </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_formulario"> <!--Evento formulários-->
+                        <div class="article__header">
+                            <h5> Evento Formulários </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> reset </span> <span class="comments__"> // Botão de reset pressionado </span>
+                                <span class="chave__"> submit </span> <span class="comments__"> // Botão de submit pressionado </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_impressao"> <!--Evento impressão-->
+                        <div class="article__header">
+                            <h5> Evento Impressão </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> beforeprint </span> <span class="comments__"> // Caixa de diálogo de impressão está aberta </span>
+                                <span class="chave__"> afterprint </span> <span class="comments__"> // Caixa de diálogo de impressão está fechada </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_composicao_texto"> <!--Evento composição de texto-->
+                        <div class="article__header">
+                            <h5> Evento Composição de texto </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> compositionstart </span> <span class="comments__"> // A composição de texto está preparada (semelhante ao keydown para uma entrada de teclado, mas funciona com outras entradas, como reconhecimento de fala). </span>
+                                <span class="chave__"> compositionupdate </span> <span class="comments__"> // Um caracter foi adicionado à trecho de texto que está sendo escrito </span>
+                                <span class="chave__"> compositionend </span> <span class="comments__"> // A composição de texto foi finalizada, ou cancelada. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_tela"> <!--Evento tela-->
+                        <div class="article__header">
+                            <h5> Evento Tela </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> fullscreenchange </span> <span class="comments__"> // Um elemento alternou o modo de visualização para fullscreeen ou normal </span>
+                                <span class="chave__"> fullscreenerror </span> <span class="comments__"> // Não foi possível alternar para o modo fullscreen por problemas técnicos ou falta de permissão </span>
+                                <span class="chave__"> resize </span> <span class="comments__"> // A tela foi redimensionada </span>
+                                <span class="chave__"> scroll </span> <span class="comments__"> // A tela foi rolada (movimento de scroll) </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_area_transferencia"> <!--Evento área transferencia-->
+                        <div class="article__header">
+                            <h5> Evento Área de transferência </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> cut </span> <span class="comments__"> // A seleção foi recortada e copiada para a área de transferência </span>
+                                <span class="chave__"> copy </span> <span class="comments__"> // A seleção foi copiada para a área de transferência </span>
+                                <span class="chave__"> paste </span> <span class="comments__"> // O item que estava na área de transferência foi colado </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_teclado"> <!--Evento teclado-->
+                        <div class="article__header">
+                            <h5> Evento Teclado </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> keydown </span> <span class="comments__"> // Qualquer tecla foi pressionada </span>
+                                <span class="chave__"> keypress </span> <span class="comments__"> // Qualquer tecla, com exceção de Shift, Fn e Caps Lock está pressionada (segurada) </span>
+                                <span class="chave__"> keyup </span> <span class="comments__"> // A tecla foi solta </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_mouse"> <!--Evento mouse-->
+                        <div class="article__header">
+                            <h5> Evento Mouse </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> auxclick </span> <span class="comments__"> // Um botão, ou dispositivo apontador (não primário) do dispositivo foi clicado e solto de um elemento. </span>
+                                <span class="chave__"> click </span> <span class="comments__"> // Um botão, ou dispositivo apontador (QUALQUER, mas em breve será apenas primário) foi clicado e solto. </span>
+                                <span class="chave__"> contextmenu </span> <span class="comments__"> // O botão direito do mouse foi clicado (antes do menu de contexto aparecer) </span>
+                                <span class="chave__"> dblclick </span> <span class="comments__"> // Um elemento foi clicado duas vezes em um intervalo de tempo curto </span>
+                                <span class="chave__"> mousedown </span> <span class="comments__"> // O mouse, ou dispositivo apontador está pressionando um elemento </span>
+                                <span class="chave__"> mouseenter </span> <span class="comments__"> // O mouse, ou dispositivo apontador está acima de um elemento que tem um listener ativo </span>
+                                <span class="chave__"> mouseleave </span> <span class="comments__"> // O mouse, ou dispositivo apontador foi removido do elemento com um listener </span>
+                                <span class="chave__"> mousemove </span> <span class="comments__"> // O mouse está se movendo enquanto está acima de um elemento com listener </span>
+                                <span class="chave__"> mouseover </span> <span class="comments__"> // O mouse foi movido para um elemento com um listener, ou em um de seus filhos </span>
+                                <span class="chave__"> mouseout </span> <span class="comments__"> // O mouse foi removido do elemento, ou de algum filho contendo um listener </span>
+                                <span class="chave__"> mouseup </span> <span class="comments__"> // O botão do mouse ou dispositivo foi solto </span>
+                                <span class="chave__"> pointerlockchange </span> <span class="comments__"> // O botão foi bloqueado ou liberado </span>
+                                <span class="chave__"> pointerlockerror </span> <span class="comments__"> // Não foi possível bloquear o dispositivo por motivo técnico ou de permissão </span>
+                                <span class="chave__"> select </span> <span class="comments__"> // Algum texto está sendo selecionado </span>
+                                <span class="chave__"> wheel </span> <span class="comments__"> // Foi detectada rotação no scroll do mouse </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_arrastar_soltar"> <!--Evento arrastar e soltar-->
+                        <div class="article__header">
+                            <h5> Evento Arrastar e soltar </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> drag </span> <span class="comments__"> // Um elemento ou uma seleção de texto está sendo arrastado. </span>
+                                <span class="chave__"> dragend </span> <span class="comments__"> // Uma operação de arrastar foi abortada (Por soltar o botão do mouse, ou apertando o Esc). </span>
+                                <span class="chave__"> dragenter </span> <span class="comments__"> // Um elemento ou texto selecionado foi arrastado para um local de destino válido </span>
+                                <span class="chave__"> dragstart </span> <span class="comments__"> // Uma operação de arrastar foi iniciada </span>
+                                <span class="chave__"> dragleave </span> <span class="comments__"> // Um elemento ou texto selecionado foi arrastado para fora de um local de destino válido </span>
+                                <span class="chave__"> dragover </span> <span class="comments__"> // Um elemento ou uma seleção de texto está sendo arrastado em uma área de destino válida. </span>
+                                <span class="chave__"> drop </span> <span class="comments__"> // Um elemento ou uma seleção de texto foi solto em um destino válido. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_midia"> <!--Evento mídia-->
+                        <div class="article__header">
+                            <h5> Evento Mídia </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> audioprocess </span> <span class="comments__"> // A entrada do buffer de ScriptProcessorNode está pronta para ser processada </span>
+                                <span class="chave__"> canplay </span> <span class="comments__"> // O navegador pode reproduzir o arquivo, mas estima que não haverá dados suficientes para reproduzir o arquivo sem interrupções para recarregar o buffer. </span>
+                                <span class="chave__"> canplaythrough </span> <span class="comments__"> // O navegador estima que poderá reproduzir o arquivo sem interrupções até o final. </span>
+                                <span class="chave__"> complete </span> <span class="comments__"> // A renderização de OfflineAudioContext foi finalizada. </span>
+                                <span class="chave__"> durationchange </span> <span class="comments__"> // O atributo duration foi atualizado. </span>
+                                <span class="chave__"> emptied </span> <span class="comments__"> // Ausencia de conteúdo. Por exemplo, este evento é enviado se a mídia foi carregada (ou parcialmente) e o método load() foi chamado para recarregar o conteúdo. </span>
+                                <span class="chave__"> ended </span> <span class="comments__"> // A reprodução foi finalizada devido ao fim do conteúdo </span>
+                                <span class="chave__"> loadeddata </span> <span class="comments__"> // O primeiro frame de mídia foi carregado. </span>
+                                <span class="chave__"> loadedmetadata </span> <span class="comments__"> // Os metadados foram carregados. </span>
+                                <span class="chave__"> pause </span> <span class="comments__"> // A reprodução foi pausada. </span>
+                                <span class="chave__"> play </span> <span class="comments__"> // A reprodução foi iniciada. </span>
+                                <span class="chave__"> playing </span> <span class="comments__"> // A reprodução está pronta para iniciar depois de ser pausada, ou atrasada devido a falta de dados. </span>
+                                <span class="chave__"> ratechange </span> <span class="comments__"> // A taxa de reprodução foi alterada. </span>
+                                <span class="chave__"> seeked </span> <span class="comments__"> // Operação de busca finalizada. </span>
+                                <span class="chave__"> seeking </span> <span class="comments__"> // Operação de busca iniciada. </span>
+                                <span class="chave__"> stalled </span> <span class="comments__"> // The user agent is trying to fetch media data, but data is unexpectedly not forthcoming. </span>
+                                <span class="chave__"> suspend </span> <span class="comments__"> // Media data loading has been suspended. </span>
+                                <span class="chave__"> timeupdate </span> <span class="comments__"> // The time indicated by the currentTime attribute has been updated. </span>
+                                <span class="chave__"> volumechange </span> <span class="comments__"> // The volume has changed. </span>
+                                <span class="chave__"> waiting </span> <span class="comments__"> // Playback has stopped because of a temporary lack of data. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="evento_progresso"> <!--Evento progresso-->
+                        <div class="article__header">
+                            <h5> Evento Progresso </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__"> abort </span> <span class="comments__"> // O progresso terminou (com sucesso). </span>
+                                <span class="chave__"> error </span> <span class="comments__"> // Erro no progresso. </span>
+                                <span class="chave__"> load </span> <span class="comments__"> // O progresso foi bem sucedido. </span>
+                                <span class="chave__"> loadend </span> <span class="comments__"> // O progresso foi interrompido (devido a 'error', 'abort' ou load) </span>
+                                <span class="chave__"> loadstart </span> <span class="comments__"> // O progresso iniciou </span>
+                                <span class="chave__"> progress </span> <span class="comments__"> // Em progresso </span>
+                                <span class="chave__"> timeout </span> <span class="comments__"> // O progresso foi finalizado pois o tempo pré determinado foi expirado. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="style_classe"> <!--Style classe-->
+                        <div class="article__header">
+                            <h5> Style Class </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).classList; <span class="comments__"> // Retorna uma coleção dos atributos da class do elemento. </span>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).classList.add(<span class="value__"> "class" </span>); <span class="comments__"> // Adiciona a classe no parâmetro. </span>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).classList.remove(<span class="value__"> "class" </span>); <span class="comments__"> // Remove a class passada no parâmetro. </span>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).classList.toggle(<span class="value__"> "class" </span>); <span class="comments__"> // Troca um pelooutro, quando só possui um parâmetro, remove ou adiciona o mesmo. </span>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).classList.contains(<span class="value__"> "class" </span>); <span class="comments__"> // Verifica se a classe no parâmetro existe no atributo class do elemento. </span>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).classList.item(<span class="value__"> "class" </span>); <span class="comments__"> // Retorna o valor da classe por índice na coleção. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="style_style"> <!--Style-->
+                        <div class="article__header">
+                            <h5> Style Style </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                document.<span class="chave__">getElementById</span>(<span class="value__"> 'id'</span>).style.display = <span class="value__"> 'block' </span>; <span class="comments__"> // Adiciona css ao elemento de forma direta. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="array"> <!--Array-->
+                        <div class="article__header">
+                            <h5> Array </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> // Listagem númerada. </span>
+                                <span class="comments__"> // É possível ter arrays dentro de arrays. </span>
+                                <span class="comments__"> // É possível ter funções dentro de arrays. </span>
+                                <span class="comments__"> // É possível ter objetos dentro de arrays. </span>
+                                <span class="comments__"> // Conjunto de vários elementos (listas). </span>
+
+                                <span class="chave__"> var </span> variavel__array = [
+                                    <span class="value__">'elemento'</span>,
+                                    <span class="value__">'elemento2'</span>
+                                ];
+
+                                <span class="comments__"> // Forma antiga de criar. </span>
+                                <span class="chave__"> var </span> variavel__array = new Array(
+                                    <span class="value__">'elemento'</span>,
+                                    <span class="value__">'elemento2'</span>
+                                );
+                            </code>
+
+                        </div>
+                    </article>
+
+                    <article class="article__" id="objeto"> <!--Objeto-->
+                        <div class="article__header">
+                            <h5> Objeto </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> // Listagem nomeada. </span>
+                                <span class="comments__"> // É possível ter funções dentro de objetos. </span>
+                                <span class="comments__"> // Coleção de dados e/ou funcionalidades relacionadas. </span>
+
+                                <span class="chave__"> var </span> variavel__objeto = {
+                                    nome: <span class="value__">'elemento'</span>,
+                                    tipo: <span class="value__">'elemento2'</span>
+                                };
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="loop_for"> <!--Loop for-->
+                        <div class="article__header">
+                            <h5> Loop for </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> // For loop & for loop array. </span>
+
+                                <span class="comments__"> // Forma número 01 </span>
+                                <span class="chave__">let </span> variavel__loop = <span class="value__">""</span>;
+
+                                <span class="chave__">for </span> (i = 0; i < 50; i++ ) {
+                                    variavel__loop = variavel__loop + i + '< br>';
+                                }
+
+                                <span class="comments__"> // Forma número 02 (Array) </span>
+                                <span class="chave__">let </span> variavel_loop_array = [ <span class="value__">'Item 01', 'item 02' 'item 03'</span> ];
+                                <span class="chave__">let </span> list = <span class="value__">'< ul>'</span>;
+
+                                <span class="chave__">for </span> (let i in variavel_loop_array) {
+                                    list +=  <span class="value__">'< li>'</span>+ variavel_loop_array[i] +<span class="value__">'< /li>'</span>;
+                                }
+
+                                list += <span class="value__">'< /ul>'</span>;
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="loop_while"> <!--Loop while-->
+                        <div class="article__header">
+                            <h5> Loop While </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> // Enquanto a condição for satisfatória ele roda o loop. </span>
+
+                                <span class="chave__">let </span> html = <span class="value__">""</span>;
+                                <span class="chave__">let </span> loop_while = <span class="value__">0</span>;
+
+                                <span class="chave__">while </span> (loop_while <= 10) {
+                                    html +=  <span class="value__">'Número: '</span>+ loop_while +<span class="value__">'< /br>'</span>;
+                                    loop_while++;
+                                }
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="methodo_string"> <!--Metodos string-->
+                        <div class="article__header">
+                            <h5> Métodos de manipulação de string </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__">let </span> nome = <span class="value__">"javaScript é a melhor linguagem de programação"</span>;
+
+                                console.log(nome.<span class="method__">lenght</span>); <span class="comments__"> // Saber quantos caracteres tem a string. </span>
+                                console.log(nome.<span class="method__">indexOf('Script')</span>); <span class="comments__"> // Procura a palavra especificada, retorna a posição que ela inicia (se não encontrar retorna -1) </span>
+
+                                <span class="comments__"> // Extrair informações da string. </span>
+                                console.log(nome.<span class="method__">slice(0, 10)</span>); <span class="comments__"> // Slice - Primeiro parametro posição inicial (obrigatório) e segundo parametro posição final. Tem a possibilidade de iniciar do final da strring informando números negativos. </span>
+                                console.log(nome.<span class="method__">substring(0, 10)</span>); <span class="comments__"> // substring - Igual o slice porém não pode começar do final. </span>
+                                console.log(nome.<span class="method__">substr(5, 3)</span>); <span class="comments__"> // Igual o slice, porém o segundo parametro é a quantidade de caracteres que quer pegar e não a posição final. </span>
+                                console.log(nome.<span class="method__">replace('de programação', '')</span>); <span class="comments__"> // replace - Pesquise pelo primeiro parametro e substitua ele pelo segundo </span>
+                                console.log(nome.<span class="method__">toUpperCase()</span>); <span class="comments__"> // Todas as letras maiúsculas. </span>
+                                console.log(nome.<span class="method__">toLowerCase()</span>); <span class="comments__"> // Todas as letras minúsculas. </span>
+                                console.log(nome.<span class="method__">concat(' ', 'atualmente')</span>); <span class="comments__"> // Para concatenação. Pode ter quantos parametros quiser. </span>
+                                console.log(nome.<span class="method__">trim()</span>); <span class="comments__"> // Remover espaços em branco inuteis no inicio e fim da string. </span>
+                                console.log(nome.<span class="method__">charAt(3)</span>); <span class="comments__"> // Saber qual o cartactere ta na posição informada. </span>
+                                console.log(nome[3]); <span class="comments__"> // Apartir do ECMAScript 5 da pra saber o caractere dessa forma, ao invés de usar a função charAt(). </span>
+                                console.log(nome.<span class="method__">split(' ')</span>); <span class="comments__"> // Transforma a string em array. Onde encontrar o que foi informado no parametro, divide a string. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="methodo_numero"> <!--Metodos números-->
+                        <div class="article__header">
+                            <h5> Métodos de manipulação de números </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__">let </span> num1 = <span class="value__">10</span>;
+                                <span class="chave__">let </span> num2 = <span class="value__">10.51564</span>;
+                                <span class="chave__">let </span> num3 = <span class="value__">"15"</span>;
+                                <span class="chave__">let </span> num4 = <span class="value__">"15.52"</span>;
+
+                                console.log(num2.<span class="method__">toFixed(2)</span>); <span class="comments__"> // Exibe apenas a quantidade de casas decimais informadas no parametro (bom para dinheiro). </span>
+                                console.log(num1.<span class="method__">toString()</span>); <span class="comments__"> // Transforma o número em string. </span>
+                                console.log(<span class="method__">parseInt(num3) + 5</span>); <span class="comments__"> // Tranforma a string em número. </span>
+                                console.log(<span class="method__">parseFloat(num4) + 5</span>); <span class="comments__"> // Tranforma a string em número e preserva as casas decimais. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="methodo_array"> <!--Metodos arrays-->
+                        <div class="article__header">
+                            <h5> Métodos de manipulação de arrays </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="chave__">let </span> lista = [<span class="value__">'Item01', 'Item02' , 'Item03', 'Item04', 'Item05'</span>]
+                                <span class="chave__">let </span> lista2 = [<span class="value__">'Item06', 'Item07' , 'Item08', 'Item09', 'Item10'</span>]
+                                <span class="chave__">let </span> lista3 = [<span class="value__">'45', '4', '9', '16', '25'</span>]
+                                <span class="chave__">let </span> lista4 = [<span class="value__"></span>]
+                                <span class="chave__">let </span> lista5 = [<span class="value__">{ id: 1, nome: 'Fulano', sobrenome: 'de Tal' }, { id: 2, nome: 'Ciclano', sobrenome: 'de nada' }, { id: 3, nome: 'Beltrano', sobrenome: 'dequele' }</span>];
+                                <span class="chave__">let </span> lista6 = [<span class="value__"></span>]
+
+
+                                console.log(lista.<span class="method__">toString()</span>); <span class="comments__"> // Tranforma o array todo em uma string unica e separa por vírgula. </span>
+                                console.log(lista.<span class="method__">join('-')</span>); <span class="comments__"> // Separa o array pelo caractere informado no parametro. </span>
+                                console.log(lista.<span class="method__">indexOf('Item01')</span>); <span class="comments__"> // Procura o elemento especificado e retorna a posição dele. </span>
+                                listaGrande = lista.<span class="method__">concat(<span class="value__">lista2</span>)</span>;  <span class="comments__"> // Unindo arrays </span>
+
+                                <span class="comments__"> // Realmente altera o array </span>
+                                lista.<span class="method__">push('Item06')</span>); <span class="comments__"> // Adiciona um novo item ao array. </span>
+                                lista[0] = <span class="value__">'Item0'</span>); <span class="comments__"> // Alterar item ao array. Se informar uma posição que não existe, ele cria um novo item no array. </span>
+                                lista.<span class="method__">shift()</span>); <span class="comments__"> // Remove o primeiro item do array. </span>
+                                lista.<span class="method__">pop()</span>); <span class="comments__"> // Remove o último item do array. </span>
+                                lista.<span class="method__">splice(<span class="value__">1, 2</span>)</span>; <span class="comments__"> // Splice - remove o item do array, o primeiro parametro significa apartir e o segundo parametro é a quantidade de elementos que deseja remover. Se informar um parametro só, ele remove todos os itens apartir do indice informado. </span>
+                                lista.<span class="method__">sort()</span>; <span class="comments__"> // Ordenar array em ordem alfabética. Possui um parametro especial. </span>
+                                lista.<span class="method__">reverse()</span>; <span class="comments__"> // Inverte a ordem do array. </span>
+
+                                <span class="comments__"> // Mapeia o array, percorre cada item do array aplicando a condição passada. </span>
+                                lista4 = <span class="method__">lista3.map(function(item)</span> {
+                                    return item * 2; <span class="comments__"> // Multiplica cada item do array por 2. </span>
+                                });
+
+                                <span class="comments__"> // Seria a mesma coisa do que o for abaixo. </span>
+                                <span class="chave__">for </span> (i in lista3) {
+                                    lista4.<span class="method__">push(<span class="value__">lista3[i] * 2</span>)</span>;
+                                }
+
+                                <span class="comments__"> // Filtra o array retornando true ou false. </span>
+                                lista4 = lista3.<span class="method__">filter(function(item)</span> {
+                                    return (item < 20)? true : false;
+                                });
+
+                                <span class="comments__"> // Apenas retorna true ou false se TODOS os itens satisfazerem a condição, não retorna um novo array. </span>
+                                lista4 = lista3.<span class="method__">filter(function(item)</span> {
+                                    return (item < 20)? true : false;
+                                });
+
+                                <span class="comments__"> // Apenas retorna true ou false se ALGUNS os itens satisfazerem a condição, não retorna um novo array. </span>
+                                lista4 = lista3.<span class="method__">some(function(item)</span> {
+                                    return (item < 20)? true : false;
+                                });
+
+                                <span class="comments__"> // Retorna o primeiro item que satisfaça as condições. Pode receber como parametro (item, index, array). </span>
+                                lista6 = lista5.<span class="method__">find(function(item)</span>{
+                                    return (item.sobrenome == 'de nada')? true : false;
+                                });
+
+                                <span class="comments__"> // Retorna a posição do item que satisfaça as condições. </span>
+                                lista6 = lista5.<span class="method__">findIndex(function(item)</span>{
+                                    return (item.id == 3)? true : false;
+                                });
+
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="date"> <!--Datas-->
+                        <div class="article__header">
+                            <h5> Datas </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> // Pode passar 7 parametros (Ano, Mês, dia, Hora, Minuto, Segundo, Milésimo). </span>
+                                <span class="comments__"> // O mínimo a ser passado como parametro é o ano e mês. </span>
+                                <span class="comments__"> // No javaScript o mês começa do zero. </span>
+                                <span class="comments__"> // Quando passa zero como parametro, retorna para o ano de 1970 porque foi quando começou a contar em termos de milissegundos. </span>
+                                <span class="comments__"> // Para obter datas anteriores a 1970 deve-se colocar o milissegundos em negativo. </span>
+
+                                <span class="chave__">let </span> dt = <span class="method__"> new Date</span> (); <span class="comments__"> // Cria uma data baseada no hardware do dispositivo, com informações completas. </span>
+                                <span class="chave__">let </span> dt2 = <span class="method__"> new Date</span> (<span class="value__">2020, 0, 1, 12, 30, 12, 2</span>);
+                                <span class="chave__">let </span> dt3 = <span class="method__"> new Date</span> (<span class="value__">'2020-01-01 15:42:17'</span>);
+                                <span class="chave__">let </span> dt4 = <span class="method__"> new Date</span> (<span class="value__"></span>);
+
+                                console.log(dt.<span class="method__">toDateString()</span>); <span class="comments__"> // Data resumida. </span>
+                                console.log(dt.<span class="method__">toUTCString()</span>); <span class="comments__"> // Remove o fuso horário e retorna o oficial de greenwich. </span>
+
+                                <span class="comments__"> // Métodos para pegar informações da data. </span>
+                                console.log(dt.<span class="method__">getFullYear()</span>); <span class="comments__"> // Retorna somente o ano. </span>
+                                console.log(dt.<span class="method__">getMonth()</span>); <span class="comments__"> // Retorna somente o mês (Lembrar que a contagem çomeça em zero). </span>
+                                console.log(dt.<span class="method__">getDay()</span>); <span class="comments__"> // Retorna o dia da semana (de zero a seis). </span>
+                                console.log(dt.<span class="method__">getDate()</span>); <span class="comments__"> // Retorna o dia. </span>
+                                console.log(dt.<span class="method__">getHours()</span>); <span class="comments__"> // Retorna as horas. </span>
+                                console.log(dt.<span class="method__">getMinutes</span>); <span class="comments__"> // Retorna os minutos. </span>
+                                console.log(dt.<span class="method__">getSeconds()</span>); <span class="comments__"> // Retorna os segundos. </span>
+                                console.log(dt.<span class="method__">getMilliseconds()</span>); <span class="comments__"> // Retorna os milissegundos. </span>
+                                console.log(dt.<span class="method__">getTime()</span>); <span class="comments__"> // Retorna o timestamp (a quantidade de milissegundos entre 01/01/1970 00:00:00 até a data atual). </span>
+
+                                <span class="comments__"> // Não precisa definir variavel ou objeto (Retorna como timestamp) veio com o ECMAScript 5. </span>
+                                console.log(Date.<span class="method__">now()</span>);
+
+                                <span class="comments__"> // Métodos para manipular a data. </span>
+                                dt.<span class="method__">setFullYear()</span>; <span class="comments__"> // Seta o ano. </span>
+                                dt.<span class="method__">setMonth()</span>; <span class="comments__"> // Seta o mês (Lembrar que a contagem çomeça em zero). </span>
+                                dt.<span class="method__">setDay()</span>; <span class="comments__"> // Seta o dia da semana (de zero a seis). </span>
+                                dt.<span class="method__">setHours()</span>; <span class="comments__"> // Seta as horas. </span>
+                                dt.<span class="method__">setMinutes</span>; <span class="comments__"> // Seta os minutos. </span>
+                                dt.<span class="method__">setSeconds()</span>; <span class="comments__"> // Seta os segundos. </span>
+                                dt.<span class="method__">setMilliseconds()</span>; <span class="comments__"> // Seta os milissegundos. </span>
+                                dt.<span class="method__">setTime()</span>; <span class="comments__"> // Seta o timestamp (a quantidade de milissegundos entre 01/01/1970 00:00:00 até a data atual). </span>
+                                dt.<span class="method__">setDate()</span>; <span class="comments__"> // Seta o dia. </span>
+                                dt.<span class="method__">setDate( dt.getDate() + 5)</span>; <span class="comments__"> // Adiciona x dias apartir do dia atual (também funciona para os outros, como horas por exemplo). </span>
+
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="matematica"> <!--Matemática-->
+                        <div class="article__header">
+                            <h5> Matemática </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> // Método Math é responsável por fazer diversos tipos de cálculos em javaScript. </span>
+
+                                console.log(Math.<span class="method__">round(3.77)</span>); <span class="comments__"> // Arredonda o número para baixo ou acima de acordo com o próprio número. </span>
+                                console.log(Math.<span class="method__">floor(3.77)</span>); <span class="comments__"> // Arredonda sempre para baixo. </span>
+                                console.log(Math.<span class="method__">ceil(3.10)</span>); <span class="comments__"> // Arredonda para cima. </span>
+                                console.log(Math.<span class="method__">abs(-5992231)</span>); <span class="comments__"> // Saber o número absoluto (positivo). </span>
+                                console.log(Math.<span class="method__">min(7, 100 ,600,20, 3)</span>); <span class="comments__"> // Mínimo, informa qual o menor número dos informados. </span>
+                                console.log(Math.<span class="method__">max(7, 100 ,600,20, 3)</span>); <span class="comments__"> // Máximo, informa qual o maior número dos informados. </span>
+                                console.log(Math.<span class="method__">random()</span>); <span class="comments__"> // Retorna um número aleatório entre 0 e 1. (Geralmente usada com outra função). </span>
+                                console.log(Math.<span class="method__">floor(Math.random() * 100)</span>); <span class="comments__"> // Retorna um número aleatório até no máximo menor que 100. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="intervalo"> <!--Intervalo-->
+                        <div class="article__header">
+                            <h5> Intervalos (Timers) </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="method__">setInterval(<span class="value__">show__time, 1000</span>); <span class="comments__"> // Cria um timer e executa a função no primeiro parametro de acordo com o tempo (milissegundos) informado no segundo parametro. </span>
+                                <span class="method__">clearInterval(<span class="value__">time</span>); <span class="comments__"> //  Método para parar o setInterval, se não executa para sempre. </span>
+
+                                <span class="comments__"> // Seta um tempo, ele espera esse tempo, roda a função e depois para sozinho. </span>
+                                <span class="comments__"> // Pode ser setado em uma variavel também, pois, possui um método de parada também. Mas geralmente é setado avulso. </span>
+                                <span class="method__">setTimeout() </span>
+                                <span class="method__">clearTimeout(); </span>
+
+
+                                <div id="timer"></div>
+
+                                <button class="button__" id="iniciar__setInterval"> Iniciar (setInterval) </button>
+                                <button class="button__" id="parar__clearInterval"> Parar (clearInterval) </button>
+                                <button class="button__" id="rodar__setTimeout"> Rodar (setTimeout) </button>
+                                <button class="button__" id="clear__clearTimeout"> Parar (clearTimeout) </button>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="template_string"> <!--Template string-->
+                        <div class="article__header">
+                            <h5> Template String </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> Recurso do ECMAScript 6 </span>
+                                <span class="comments__"> // Aspas diferentes para o templete string. </span>
+                                <span class="comments__"> // A utilização de variavel também muda. </span>
+
+                                <span class="chave__">let </span> nome = <span class="value__">'Fulano'</span>
+                                console.log('Meu nome é ' <span class="chave__">+nome +</span> ' de tal'); <class class="comments__"> // Com método tradicional. </class>
+                                console.log(`Meu nome é <span class="chave__">${nome}</span> de tal`); <span class="comments__"> // Com template string. </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="desconstruindo_objeto"> <!--Desconstruindo obejto-->
+                        <div class="article__header">
+                            <h5> Desconstrução de obejto </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> Recurso do ECMAScript 6 </span>
+                            </code>
+                        </div>
+                    </article>
+
+                    <article class="article__" id="desconstruindo_array"> <!--Desconstruindo Array-->
+                        <div class="article__header">
+                            <h5> Desconstrução de Array </h5>
+                        </div>
+
+                        <div class="article__body">
+                            <code contenteditable>
+                                <span class="comments__"> Recurso do ECMAScript 6 </span>
+                            </code>
+                        </div>
+                    </article>
+                </main>
+
+                <footer class="footer__">
+                    <span class="copyright__"> &copy; Matheus Ramalho. Todos os direitos reservados. </span>
+                    <a href="https://matheusramalho.dev"> matheusramalho.dev </a>
+                </footer>
+            </div>
+
+            <!-- <a class="but/ton__icon fixed__bottom" id="back__to__top" href="#">
+                <svg class="svg__icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <path fill="#8571FF" d="m439.33 255.57c.05 15.03-5.97 29.7-16.51 40.24l-134.29 134.29c-8.97 8.97-20.75 13.45-32.53 13.45s-23.56-4.48-32.53-13.45l-134.78-134.79c-10.51-10.5-16.29-24.46-16.29-39.31 0-14.71 5.69-28.57 16.02-39.04 10.31-10.45 24.21-16.24 39.15-16.29h.19c14.96 0 29.55 6.01 40.05 16.51l32.19 32.19v-193.37c0-30.88 25.12-56 56-56s56 25.12 56 56v193.37l32.69-32.68c10.5-10.51 24.46-16.29 39.31-16.29 14.71 0 28.57 5.69 39.04 16.02 10.45 10.31 16.24 24.21 16.29 39.15z"/>
+                        <path fill="#6F57FF" d="m312 56v193.37l-22 22v-193.37c0-30.88-25.12-56-56-56-9.8 0-19.01 2.53-27.03 6.97 9.55-17.26 27.95-28.97 49.03-28.97 30.88 0 56 25.12 56 56z"/>
+                        <path fill="#6F57FF" d="m439.33 255.57c.05 15.03-5.97 29.7-16.51 40.24l-134.29 134.29c-8.97 8.97-20.75 13.45-32.53 13.45-5.3 0-10.61-.91-15.66-2.73 6.16-2.22 11.93-5.79 16.86-10.72l134.29-134.29c10.54-10.54 16.56-25.21 16.51-40.24-.05-14.94-5.84-28.84-16.29-39.15-6.65-6.56-14.66-11.25-23.39-13.79 5.03-1.47 10.3-2.23 15.68-2.23 14.71 0 28.57 5.69 39.04 16.02 10.45 10.31 16.24 24.21 16.29 39.15z"/>
+                    </g>
+                </svg>
+            </a> -->
+        </div>
+
+        <!--Script-->
+        <script src="src/js/script.js"></script>
+        <script src="src/js/study.js"></script>
+    </body>
+</html>
+
+
